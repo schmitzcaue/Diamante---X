@@ -17,7 +17,18 @@
             {
 
                 ExibirCabecalho();
-               
+                int numeroUsuario = Convert.ToInt32(Console.ReadLine());
+
+
+                ExibirMensagemErro(numeroUsuario);
+
+               // while (true)
+               //{
+
+                    Console.WriteLine("\n Pressione ENTER para continuar ...");
+                    Console.ReadLine();
+                    
+                //}
             }
         }
 
@@ -29,5 +40,13 @@
             Console.WriteLine("----------------------------------");
             //Console.ReadLine();
         }
+
+        static void ExibirMensagemErro(int numeroUsuario)
+        {
+             if (numeroUsuario< 3 || numeroUsuario % 2 == 0)
+                {
+                    Console.WriteLine("Numero inválido! Digite um número ímpar ");
+                }
+}
     }
 }

@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ExibirCabecalho();
+        }
+
+        static void ExibirCabecalho()
+        {
+            Console.WriteLine("----------DIAMANTE com X----------");
+            Console.WriteLine(" Digite um número inteiro para desenhar o diamante: ");
+            Console.WriteLine("----------------------------------------");
         }
     }
 }

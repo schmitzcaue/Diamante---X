@@ -13,23 +13,60 @@
         //● A linha central do diamante deve conter o número máximo de Xs.
         static void Main(string[] args)
         {
-            while (true)
+           
+            ExibirCabecalho();
+            int tamanhoDoDiamante = Convert.ToInt32(Console.ReadLine());
+
+            int quantidadeDeLinhas = (tamanhoDoDiamante - 1) /2;
+            int quantidadeDeEspacos = quantidadeDeLinhas;
+            int quantidadeDeX = 1;
+
+            #region parte de cima
+            for (int i = 0; i < quantidadeDeLinhas; i++)
             {
+                for (int espaco = 0; espaco < quantidadeDeEspacos; espaco++)
+                    Console.Write(" ");
 
-                ExibirCabecalho();
-                int numeroUsuario = Convert.ToInt32(Console.ReadLine());
+                for (int x = 0; x < quantidadeDeX; x++)
+                    Console.Write("X");
+
+                quantidadeDeX += 2;
+                quantidadeDeEspacos--;
+
+                Console.WriteLine();
+            }
+            #endregion
+
+            #region parte do meio do diamante
+            for (int i = 0;i < tamanhoDoDiamante;i++)
+                Console.Write("X");
+
+            Console.WriteLine();
+            #endregion
+
+            #region parte de baixo do diamante
+
+            for (int i = 0; i < quantidadeDeLinhas; i++)
+            {
+                quantidadeDeX -= 2;
+                quantidadeDeEspacos++;
+                for (int espacos = 0; espacos < quantidadeDeEspacos; espacos++)
+                    Console.Write(" ");
+
+                for (int x = 0; x < quantidadeDeX; x++)
+                    Console.Write("X");
+
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+            #endregion
 
 
-                ExibirMensagemErro(numeroUsuario);
-
-               // while (true)
-               //{
+            ExibirMensagemErro(tamanhoDoDiamante);
 
                     Console.WriteLine("\n Pressione ENTER para continuar ...");
                     Console.ReadLine();
-                    
-                //}
-            }
+            
         }
 
         static void ExibirCabecalho()

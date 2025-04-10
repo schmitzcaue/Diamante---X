@@ -6,7 +6,7 @@ Este projeto é um programa simples em C# que desenha um **diamante** utilizando
 
 ## 📝 Especificação
 
-O programa deve funcionar da seguinte forma:
+O programa vai funcionar da seguinte forma:
 
 - Solicita ao usuário que digite um número **inteiro ímpar**.
 - Verifica se a entrada é válida. Se for um número **par**, exibe uma mensagem de erro e solicita novamente até receber um número **ímpar**.

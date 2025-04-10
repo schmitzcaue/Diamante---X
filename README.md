@@ -2,6 +2,7 @@
 
 Este projeto é um programa simples em C# que desenha um **diamante** utilizando a letra **'X'**, com base em um número **ímpar** fornecido pelo usuário.
 
+https://imgur.com/dsR2CVK
 ---
 
 ## 📝 Especificação
